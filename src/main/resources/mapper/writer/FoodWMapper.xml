@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zengbin.batch.mapper.writer.FoodWMapper">
+
+	<resultMap id="foodResultMap" type="com.zengbin.batch.vo.writer.FoodW">
+	  <id column="uid" jdbcType="BIGINT" property="uid" />
+	  <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+	  <result column="food_name" jdbcType="VARCHAR" property="foodName" />
+	  <result column="food_pic" jdbcType="VARCHAR" property="foodPic" />
+	  <result column="food_info" jdbcType="VARCHAR" property="foodInfo" />
+	  <result column="price" jdbcType="DECIMAL" property="price" />
+	  <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+	  <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+	</resultMap>
+
+	<insert id="insert" parameterType="com.zengbin.batch.vo.writer.FoodW" useGeneratedKeys="false" keyProperty="uid">
+		INSERT into food (
+			uid,
+			category_id,
+			food_name,
+			food_pic,
+			food_info,
+			price,
+			create_time,
+			update_time
+		) values (
+			#{uid},
+			#{categoryId},
+			#{foodName},
+			#{foodPic},
+			#{foodInfo},
+			#{price},
+			#{createTime},
+			#{updateTime}
+		) ON DUPLICATE KEY UPDATE food_info=#{foodInfo}
+	</insert>
+      
+</mapper>
