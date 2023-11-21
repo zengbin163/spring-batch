@@ -1,0 +1,2 @@
+# spring-batch
+基于spring生态圈的spring-batch框架实现串行读并行写的批次数据同步服务
