@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @MapperScan(basePackages = "com.zengbin.batch.mapper.writer", sqlSessionFactoryRef = "writerSessionFactory")
-public class WriterConfiguration {
+public class DbWriterConfiguration {
 
     private static final String MAPPER_PATH = "classpath:mapper/writer/*.xml";
     private static final String ENTITY_PACKAGE = "com.zengbin.batch.vo.writer";

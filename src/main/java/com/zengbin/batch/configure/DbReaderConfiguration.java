@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @MapperScan(basePackages = "com.zengbin.batch.mapper.reader", sqlSessionFactoryRef = "readerSessionFactory")
-public class ReaderConfiguration {
+public class DbReaderConfiguration {
 
     private static final String MAPPER_PATH = "classpath:mapper/reader/*.xml";
     private static final String ENTITY_PACKAGE = "com.zengbin.batch.vo.reader";

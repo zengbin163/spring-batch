@@ -1,6 +1,6 @@
 package com.zengbin.batch.configure;
 
-import com.zengbin.batch.quartz.FoodQuartzJob;
+import com.zengbin.batch.quartz.ItemListQuartzJob;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ public class QuartzConfiguration {
     @Bean
     public JobDetail jobDetail() {
         //指定任务描述具体的实现类
-        return JobBuilder.newJob(FoodQuartzJob.class)
+        return JobBuilder.newJob(ItemListQuartzJob.class)
                 // 指定任务的名称
                 .withIdentity("QuartzJobExec")
                 // 任务描述

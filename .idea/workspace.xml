@@ -4,13 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a84b99b6-34d4-478b-8f0a-bcabddacd63f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="a84b99b6-34d4-478b-8f0a-bcabddacd63f" name="Changes" comment="基于spring生态圈的spring-batch框架实现串行读并行写的批次数据同步服务">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/job/config/JobConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/job/listener/WorkStepListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/job/partitioner/ItemListPartitioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/BatchApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/configure/BatchConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/configure/QuartzConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/configure/ReaderConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/configure/WriterConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/job/JobCreator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/mapper/reader/FoodRMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/mapper/writer/FoodWMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/processor/FoodListProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/quartz/FoodQuartzJob.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/reader/FoodListReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/response/QueryResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/service/reader/FoodReaderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/service/writer/FoodWriterService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/step/StepCreator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/util/DateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/util/ShardingUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/vo/Sharding.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/vo/reader/FoodR.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/vo/writer/FoodW.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/web/CreateReaderDataController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/web/SimpleTaskletJobController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/web/SimpleTaskletJobController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/web/SubCallable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/zengbin/batch/writer/FoodListWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/reader/FoodRMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/writer/FoodWMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/BatchConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/DbBatchConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/QuartzConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/QuartzConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/ReaderConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/DbReaderConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/WriterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/configure/DbWriterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/job/JobCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/processor/FoodListProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/job/processor/ItemListProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/quartz/FoodQuartzJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/quartz/ItemListQuartzJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/reader/FoodListReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/step/StepCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/util/ShardingUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/util/ShardingUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/web/CreateReaderDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/web/CreateReaderDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/writer/FoodListWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zengbin/batch/job/writer/ItemListWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,10 +71,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2YTDY38AvYFFaeYtGrkJ4vrx52R" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,20 +83,36 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zengbin.batch.job.partitioner" />
+      <recent name="com.zengbin.batch.job.processor" />
+      <recent name="com.zengbin.batch.job.writer" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="lua.app" factoryName="Lua Application">
-      <option name="program" value="/usr/local/bin/lua" />
-      <option name="file" value="" />
-      <option name="workingDir" value="$PROJECT_DIR$/src/main/java" />
-      <option name="debuggerType" value="2" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="true" />
-      <method v="2" />
+    <configuration name="BatchApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zengbin.batch.BatchApplication" />
+      <module name="batch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zengbin.batch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BatchApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,6 +123,19 @@
       <option name="presentableId" value="Default" />
       <updated>1700540721618</updated>
     </task>
+    <task id="LOCAL-00001" summary="基于spring生态圈的spring-batch框架实现串行读并行写的批次数据同步服务">
+      <option name="closed" value="true" />
+      <created>1700540927220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700540927220</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="基于spring生态圈的spring-batch框架实现串行读并行写的批次数据同步服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="基于spring生态圈的spring-batch框架实现串行读并行写的批次数据同步服务" />
   </component>
 </project>

@@ -19,6 +19,9 @@ public class ShardingUtil {
             Sharding sharding = new Sharding();
             sharding.setBeginDate(beginDate);
             Date nextDate = addMonth(beginDate, 1);
+            if(nextDate.after(endDate)) {
+                nextDate = endDate;
+            }
             sharding.setEndDate(nextDate);
             beginDate = nextDate;
             list.add(sharding);
